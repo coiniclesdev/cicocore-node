@@ -1,7 +1,7 @@
-Qtumcore Node
+Cicocore Node
 ============
 
-A QTUM full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services.
+A CICO full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services.
 
 ## Getting Started
 
@@ -13,43 +13,43 @@ A QTUM full node for building applications and services with Node.js. A node is 
     ```  
 2. Install mongo https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/  
 
-3. Install qtum-bitcore https://github.com/qtumproject/qtum-bitcore - with ZMQ ! 
+3. Install cico-bitcore https://github.com/coiniclesdev/cico-bitcore - with ZMQ ! 
 
     ```bash
     # with ZMQ
     sudo apt-get install libzmq3-dev 
     ```  
-4. Install qtumcore-node  
+4. Install cicocore-node  
 
     ```bash
-    npm i https://github.com/qtumproject/qtumcore-node.git#master
+    npm i https://github.com/coiniclesdev/cicocore-node.git#master
 
-    $(npm bin)/qtumcore-node create mynode
+    $(npm bin)/cicocore-node create mynode
 
     cd mynode
 
     ```  
-5. Edit qtumcore-node.json  
+5. Edit cicocore-node.json  
 
     ```json
     {
       "network": "livenet",
       "port": 3001,
       "services": [
-	    "qtumd",
+	    "cicod",
         "web"
       ],
       "servicesConfig": {
-        "qtumd": {
+        "cicod": {
           "spawn": {
-            "datadir": "/home/user/.qtum",
-            "exec": "/home/user/qtum-bitcore/src/qtumd"
+            "datadir": "/home/user/.cico",
+            "exec": "/home/user/cico-bitcore/src/cicod"
           }
         }
       }
 	}
     ```  
-6. Edit qtum.conf  
+6. Edit cico.conf  
 
     ```
     server=1
@@ -72,15 +72,15 @@ A QTUM full node for building applications and services with Node.js. A node is 
 7. Run Node  
 
     ```
-    $(npm bin)/qtumcore-node start
+    $(npm bin)/cicocore-node start
     ```  
 
 ## Add-on Services
 
-There are several add-on services available to extend the functionality of Qtumcore:
+There are several add-on services available to extend the functionality of Cicocore:
 
-- [QTUM Insight API](https://github.com/qtumproject/insight-api)
-- [QTUM Explorer](https://github.com/qtumproject/qtum-explorer)
+- [CICO Insight API](https://github.com/coiniclesdev/insight-api)
+- [CICO Explorer](https://github.com/coiniclesdev/cico-explorer)
 
 ## Contributing
 
